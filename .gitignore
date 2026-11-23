@@ -1,0 +1,34 @@
+
+# Python environment
+.venv/
+__pycache__/
+*.pyc
+
+# Secrets and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pgpass
+pgpass.conf
+
+# OULAD dataset
+data/*.csv
+data/*.zip
+data/**/*.csv
+data/**/*.zip
+archive/
+archive.zip
+
+# Local database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Downloaded PostgreSQL installer
+postgresql-*.exe
+
+# Assignment brief
+Assignment 2.pdf

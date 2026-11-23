@@ -1,0 +1,216 @@
+{
+  "tables": [
+    {
+      "filename": "assessments.csv",
+      "rows": 206,
+      "columns": 6,
+      "column_names": [
+        "code_module",
+        "code_presentation",
+        "id_assessment",
+        "assessment_type",
+        "date",
+        "weight"
+      ],
+      "data_types": {
+        "code_module": "str",
+        "code_presentation": "str",
+        "id_assessment": "int64",
+        "assessment_type": "str",
+        "date": "float64",
+        "weight": "float64"
+      },
+      "missing_values": {
+        "code_module": 0,
+        "code_presentation": 0,
+        "id_assessment": 0,
+        "assessment_type": 0,
+        "date": 11,
+        "weight": 0
+      }
+    },
+    {
+      "filename": "courses.csv",
+      "rows": 22,
+      "columns": 3,
+      "column_names": [
+        "code_module",
+        "code_presentation",
+        "module_presentation_length"
+      ],
+      "data_types": {
+        "code_module": "str",
+        "code_presentation": "str",
+        "module_presentation_length": "int64"
+      },
+      "missing_values": {
+        "code_module": 0,
+        "code_presentation": 0,
+        "module_presentation_length": 0
+      }
+    },
+    {
+      "filename": "studentAssessment.csv",
+      "rows": 173912,
+      "columns": 5,
+      "column_names": [
+        "id_assessment",
+        "id_student",
+        "date_submitted",
+        "is_banked",
+        "score"
+      ],
+      "data_types": {
+        "id_assessment": "int64",
+        "id_student": "int64",
+        "date_submitted": "int64",
+        "is_banked": "int64",
+        "score": "float64"
+      },
+      "missing_values": {
+        "id_assessment": 0,
+        "id_student": 0,
+        "date_submitted": 0,
+        "is_banked": 0,
+        "score": 173
+      }
+    },
+    {
+      "filename": "studentInfo.csv",
+      "rows": 32593,
+      "columns": 12,
+      "column_names": [
+        "code_module",
+        "code_presentation",
+        "id_student",
+        "gender",
+        "region",
+        "highest_education",
+        "imd_band",
+        "age_band",
+        "num_of_prev_attempts",
+        "studied_credits",
+        "disability",
+        "final_result"
+      ],
+      "data_types": {
+        "code_module": "str",
+        "code_presentation": "str",
+        "id_student": "int64",
+        "gender": "str",
+        "region": "str",
+        "highest_education": "str",
+        "imd_band": "str",
+        "age_band": "str",
+        "num_of_prev_attempts": "int64",
+        "studied_credits": "int64",
+        "disability": "str",
+        "final_result": "str"
+      },
+      "missing_values": {
+        "code_module": 0,
+        "code_presentation": 0,
+        "id_student": 0,
+        "gender": 0,
+        "region": 0,
+        "highest_education": 0,
+        "imd_band": 1111,
+        "age_band": 0,
+        "num_of_prev_attempts": 0,
+        "studied_credits": 0,
+        "disability": 0,
+        "final_result": 0
+      }
+    },
+    {
+      "filename": "studentRegistration.csv",
+      "rows": 32593,
+      "columns": 5,
+      "column_names": [
+        "code_module",
+        "code_presentation",
+        "id_student",
+        "date_registration",
+        "date_unregistration"
+      ],
+      "data_types": {
+        "code_module": "str",
+        "code_presentation": "str",
+        "id_student": "int64",
+        "date_registration": "float64",
+        "date_unregistration": "float64"
+      },
+      "missing_values": {
+        "code_module": 0,
+        "code_presentation": 0,
+        "id_student": 0,
+        "date_registration": 45,
+        "date_unregistration": 22521
+      }
+    },
+    {
+      "filename": "studentVle.csv",
+      "rows": 10655280,
+      "columns": 6,
+      "column_names": [
+        "code_module",
+        "code_presentation",
+        "id_student",
+        "id_site",
+        "date",
+        "sum_click"
+      ],
+      "data_types": {
+        "code_module": "str",
+        "code_presentation": "str",
+        "id_student": "int64",
+        "id_site": "int64",
+        "date": "int64",
+        "sum_click": "int64"
+      },
+      "missing_values": {
+        "code_module": 0,
+        "code_presentation": 0,
+        "id_student": 0,
+        "id_site": 0,
+        "date": 0,
+        "sum_click": 0
+      }
+    },
+    {
+      "filename": "vle.csv",
+      "rows": 6364,
+      "columns": 6,
+      "column_names": [
+        "id_site",
+        "code_module",
+        "code_presentation",
+        "activity_type",
+        "week_from",
+        "week_to"
+      ],
+      "data_types": {
+        "id_site": "int64",
+        "code_module": "str",
+        "code_presentation": "str",
+        "activity_type": "str",
+        "week_from": "float64",
+        "week_to": "float64"
+      },
+      "missing_values": {
+        "id_site": 0,
+        "code_module": 0,
+        "code_presentation": 0,
+        "activity_type": 0,
+        "week_from": 5243,
+        "week_to": 5243
+      }
+    }
+  ],
+  "final_result_distribution": {
+    "Pass": 12361,
+    "Withdrawn": 10156,
+    "Fail": 7052,
+    "Distinction": 3024
+  }
+}
