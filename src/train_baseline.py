@@ -47,7 +47,11 @@ print("Loading day-60 modelling dataset...")
 
 with engine.connect() as connection:
     df = pd.read_sql_query(
-        text("SELECT * FROM day60_model_dataset"),
+        text("""
+            SELECT *
+            FROM day60_model_dataset
+            ORDER BY id_student
+        """),
         connection
     )
 
@@ -183,7 +187,16 @@ results = {
     "test": test_metrics
 }
 
-output = RESULTS / "random_forest_baseline.json"
+database_name = os.environ.get(
+    "OULAD_DB", "mac5043_oulad"
+)
+
+if database_name == "mac5043_oulad_repro":
+    output_name = "random_forest_reproduction.json"
+else:
+    output_name = "random_forest_baseline.json"
+
+output = RESULTS / output_name
 
 with open(output, "w", encoding="utf-8") as file:
     json.dump(results, file, indent=2)
