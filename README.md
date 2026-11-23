@@ -81,6 +81,3 @@ The full DP-SGD implementation, simulated FedAvg,
 membership-inference evaluation and compliance
 
 verification remain planned for the later Case Study.
-
-
-
