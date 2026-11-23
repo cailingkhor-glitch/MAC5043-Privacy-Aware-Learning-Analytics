@@ -94,3 +94,10 @@ print(f"Invalid site references: {invalid_sites:,}")
 print(f"Invalid student references: {invalid_students:,}")
 
 print("\nRelationship validation completed.")
+
+assert missing_assessment == 0, "Invalid assessment references found"
+assert missing_student == 0, "Invalid student references found"
+assert invalid_sites == 0, "Invalid VLE site references found"
+assert invalid_students == 0, "Invalid VLE student references found"
+
+print("All relationship validation checks passed.")
