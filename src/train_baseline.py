@@ -1,4 +1,5 @@
 
+import os
 from pathlib import Path
 from getpass import getpass
 import json
@@ -27,7 +28,9 @@ RESULTS = ROOT / "results"
 RESULTS.mkdir(exist_ok=True)
 
 # Connect securely without storing the password in code
-password = getpass("PostgreSQL password: ")
+password = os.environ.get("PGPASSWORD") or getpass(
+    "PostgreSQL password: "
+)
 
 url = URL.create(
     "postgresql+psycopg",
@@ -35,7 +38,7 @@ url = URL.create(
     password=password,
     host="localhost",
     port=5432,
-    database="mac5043_oulad",
+    database=os.environ.get("OULAD_DB", "mac5043_oulad"),
 )
 
 engine = create_engine(url)
